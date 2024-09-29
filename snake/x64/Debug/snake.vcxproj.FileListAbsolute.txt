@@ -1,3 +1,3 @@
-﻿
 C:\Users\m\Documents\projetos-cpp\snake\x64\Debug\raylib.dll
 C:\Users\m\Documents\projetos-cpp\snake\x64\Debug\glfw3.dll
+C:\Users\m\Documents\projetos-cpp\snake\snake\x64\Debug\snake.vcxproj.Up2Date
