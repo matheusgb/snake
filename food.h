@@ -5,8 +5,20 @@
 
 class Food {
 public:
-    Vector2 position = { 5,6 };
+    Vector2 position;
+    Texture2D texture;
+    Food() {
+        Image image = LoadImage("assets/apple.png");
+        texture = LoadTextureFromImage(image);
+        UnloadImage(image);
+
+        position = GenerateRandomPosition();
+    }
+    ~Food() {
+        UnloadTexture(texture);
+    }
     void Draw();
+    Vector2 GenerateRandomPosition();
 };
 
 #endif

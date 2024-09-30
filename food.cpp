@@ -2,8 +2,14 @@
 #include "raylib.h"
 
 extern int cellSize;
-extern Color white;
+extern int cellCount;
 
 void Food::Draw() {
-    DrawRectangle(position.x * cellSize, position.y * cellSize, cellSize, cellSize, white);
+    DrawTexture(texture, position.x * cellSize, position.y * cellSize, WHITE);
+}
+
+Vector2 Food::GenerateRandomPosition() {
+    float x = GetRandomValue(0, cellCount - 1);
+    float y = GetRandomValue(0, cellCount - 1);
+    return Vector2{ x,y };
 }
