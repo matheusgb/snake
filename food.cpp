@@ -1,7 +1,7 @@
 #include "food.h"
 #include "raylib.h"
 
-extern int cellSize;
+extern float cellSize;
 extern int cellCount;
 
 void Food::Draw() {
