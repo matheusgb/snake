@@ -17,6 +17,7 @@ public:
     ~Food() {
         UnloadTexture(texture);
     }
+
     void Draw();
     Vector2 GenerateRandomPosition();
 };

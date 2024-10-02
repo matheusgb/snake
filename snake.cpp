@@ -1,5 +1,6 @@
 #include "snake.h"
 #include "raylib.h"
+#include "raymath.h"
 
 extern float cellSize;
 extern int cellCount;
@@ -12,4 +13,9 @@ void Snake::Draw() {
         Rectangle segment = Rectangle{ x * cellSize, y * cellSize, cellSize, cellSize };
         DrawRectangleRounded(segment, 0.5, 6, white);
     }
+}
+
+void Snake::Update() {
+    body.pop_back();
+    body.push_front(Vector2Add(body[0], direction)); // adiciona valor para guiar a direção da snake
 }

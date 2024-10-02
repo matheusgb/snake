@@ -16,6 +16,12 @@
     <Filter Include="Arquivos de Origem\food">
       <UniqueIdentifier>{dc50a52f-a889-4e6d-821c-43cfe1e408ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Origem\snake">
+      <UniqueIdentifier>{9868d294-4aa6-462b-8a44-7308cec56ec9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\game">
+      <UniqueIdentifier>{5176e9ec-7b5b-4320-981f-65c9d2f3a73c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,10 +30,22 @@
     <ClCompile Include="food.cpp">
       <Filter>Arquivos de Origem\food</Filter>
     </ClCompile>
+    <ClCompile Include="snake.cpp">
+      <Filter>Arquivos de Origem\snake</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Arquivos de Origem\game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="food.h">
       <Filter>Arquivos de Origem\food</Filter>
+    </ClInclude>
+    <ClInclude Include="snake.h">
+      <Filter>Arquivos de Origem\snake</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Arquivos de Origem\game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
