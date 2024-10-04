@@ -14,5 +14,6 @@ void Game::Update() {
 void Game::CheckCollisionWithFood() {
     if (Vector2Equals(snake.body[0], food.position)) {
         food.position = food.GenerateRandomPosition(snake.body);
+        snake.addSegment = true;
     }
 }

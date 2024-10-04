@@ -16,6 +16,10 @@ void Snake::Draw() {
 }
 
 void Snake::Update() {
-    body.pop_back();
     body.push_front(Vector2Add(body[0], direction)); // adiciona valor para guiar a direção da snake
+    if (addSegment == true) {
+        addSegment = false;
+    } else {
+        body.pop_back();
+    }
 }
