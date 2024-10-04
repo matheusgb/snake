@@ -1,22 +1,33 @@
 #include <iostream>
 #include "raylib.h"
+#include "raymath.h"
 #include "food.h"
 #include "snake.h"
 #include "game.h"
+#include "main.h"
 
 Color white = { 238, 238, 238, 255 };
 Color black = { 51, 51, 51, 255 };
 
-float cellSize = 10;
-int cellCount = 50;
+float cellSize = 16;
+int cellCount = 25;
 
 double lastUpdateTime = 0;
 
-bool eventTriggered(double interval) {
+bool EventTriggered(double interval) {
     double currentTime = GetTime();
     if (currentTime - lastUpdateTime >= interval) {
         lastUpdateTime = currentTime;
         return true;
+    }
+    return false;
+}
+
+bool ElementInDeque(Vector2 element, std::deque<Vector2> deque) {
+    for (unsigned int i = 0; i < deque.size(); i++) {
+        if (Vector2Equals(deque[i], element)) {
+            return true;
+        }
     }
     return false;
 }
@@ -31,7 +42,7 @@ int main() {
     while (WindowShouldClose() == false) { // verifica se a tecla ESC ou o X da janela foi clicado
         BeginDrawing();
 
-        if (eventTriggered(0.1)) {
+        if (EventTriggered(0.1)) {
             game.Update();
         } 
 

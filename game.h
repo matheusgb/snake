@@ -7,10 +7,11 @@
 class Game {
 public:
 	Snake snake;
-	Food food;
+	Food food = Food(snake.body);
 
 	void Draw();
 	void Update();
+	void CheckCollisionWithFood();
 };
 
 #endif
