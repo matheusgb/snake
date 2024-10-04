@@ -12,6 +12,7 @@ public:
 
 	void Draw();
 	void Update();
+	void Reset();
 };
 
 #endif
