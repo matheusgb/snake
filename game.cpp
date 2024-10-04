@@ -15,6 +15,7 @@ void Game::Update() {
         snake.Update();
         CheckCollisionWithFood();
         CheckCollisionWithEdges();
+        CheckCollisionWithTail();
     }
 }
 

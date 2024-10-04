@@ -47,5 +47,8 @@
     <ClInclude Include="game.h">
       <Filter>Arquivos de Origem\game</Filter>
     </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Arquivos de Origem</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
